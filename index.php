@@ -66,7 +66,8 @@ echo "<head>";
 echo "<link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet'>";
 echo "<style>";
 //font styling
-echo "h1 { font-family: 'Abril Fatface', serif }";
+echo "h1 { font-family: 'Abril Fatface', serif; }";
+echo "h4 { font-size: 20px; background-color: #DDDDDD; margin: 0px;}";
 echo "</style>";
 echo "</head>";
 echo "<body>";
