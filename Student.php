@@ -64,7 +64,7 @@ class Student {
         $total = 0;
         foreach ($this->grades as $value)
             $total += $value;
-        return $total / count($this->grades);
+        return round($total / count($this->grades),2);
     }
 
     /*
@@ -75,12 +75,19 @@ class Student {
      * Returns String
      */
     function toString() {
-        $result = $this->first_name . ' ' . $this->surname;
-        $result .= ' (' . $this->average() . ")\n";
+        //name of student
+        $result = "<h4>". $this->first_name . ' ' . $this->surname . "</h4><hr>";
+        //start table
+        $result .="<table>";
+        //display grade average
+        $result .= '<tr><td>Grade Average: </td><td>' . $this->average() . "%". "</td></tr>";
+        //display array of email
         foreach ($this-> emails as $which => $what)
-            $result .= $which . ': ' . $what . "\n";
-        $result .= "\n";
-        return '<pre>' . $result . '</pre>';
+            $result .= "<tr><td>" . $which . ':</td><td>' . $what . "</td></tr>";
+        //end table
+        $result .= "</table><hr><br>";
+        //return string
+        return '' . $result . '';
 
     }
 

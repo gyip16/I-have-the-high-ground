@@ -42,11 +42,40 @@ $second->add_grade(50);
 //give student a key in students array
 $students['a456'] = $second;
 
+//create third student
+$third = new Student();
+//add student name
+$third->surname = "Yip";
+$third->first_name = "Gabriel";
+//add email(s)
+$third->add_email('home','gabrielyty@gmail.com');
+$third->add_email('school','gyip16@my.bcit.ca');
+//add grade(s)
+$third->add_grade(90);
+$third->add_grade(80);
+$third->add_grade(95);
+//give student a key in students array
+$students['a00908773'] = $third;
+
 //sort students array
 ksort($students);
 
+echo "<html>";
+echo "<head>";
+//google fonts
+echo "<link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet'>";
+echo "<style>";
+//font styling
+echo "h1 { font-family: 'Abril Fatface', serif }";
+echo "</style>";
+echo "</head>";
+echo "<body>";
+//title
+echo "<h1>Student Records</h1>";
 //display students array
 foreach($students as $student)
     echo $student->toString();
 
+echo "</body>";
+echo "</html>";
 ?>
